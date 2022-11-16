@@ -51,7 +51,7 @@ export default function Home({data}) {
           <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {postData.map((post)=> {
             return (
-              <BlogCard post={post}/>
+              <BlogCard key={post.id} post={post}/>
             )
             })}
           </div>
@@ -64,7 +64,7 @@ export default function Home({data}) {
             {postData.map((post)=> {
               if(post.isFeatured) {
                 return (
-                  <BlogCard post={post}/>
+                  <BlogCard key={post.id} post={post}/>
                 )
               }
             })}

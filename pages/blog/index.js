@@ -57,7 +57,7 @@ const Blog = ({data}) => {
           </div>
           <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {postData.map((post) => {
-              return <BlogCard post={post} />;
+              return <BlogCard key={post.id} post={post} />;
             })}
           </div>
         </div>
